@@ -1,0 +1,30 @@
+label{ 	
+	/*alignement des blocs de saisie*/
+	display: inline-block;  
+	min-width: 180px;
+}
+#adresse{
+	/*alignement vertical*/
+	vertical-align: -50%;	
+}
+#projet{
+	vertical-align: 280%;
+}
+#selecteur{
+	vertical-align: 20%;
+	/*diminution de la marge*/
+	margin-top: -5%;	
+}
+#envoyer{	
+	/*décalage G bouton envoyer*/
+	margin-left: 11%;	
+}
+h3, span{
+	/*mise en rouge de h3 et * */
+	color: #ff0000; 	
+}
+form{
+	/*mise en gras*/
+	font-weight: bold;	
+	font-family: Times New Roman;
+}

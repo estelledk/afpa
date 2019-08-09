@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>contact_formulaire</title>
+	<link rel= "stylesheet" href="assets/css/ph16_eva_ex7formulaire.css">     
+</head>
+
+<body>
+	<!-- Effectuez le contrôle de saisie de votre formulaire Jarditou en Javascript.
+	Lorsqu'une erreur est détectée, l'utilisateur doit en être informé grâce à l'affichage 
+	d'un message sous le champ concerné.
+	Le formulaire ne peut être envoyé que lorsque tout est bon. -->
+
+	<h2>Formulaire</h2>
+	<h5>*Ces zones sont obligatoires pour envoyer le formulaire</h5>
+	<form action="http://bienvu.net/script.php" method="post">
+		<fieldset id="fieldset1">
+			<legend>Vos coordonnées</legend>
+			<label for="nom">votre nom </label>
+				<input id="nom" type="text" name="nom" required>  
+<!-- id="nom" utilisé en JS dans la fonction validation, si champ vide-->
+				<span id="missNom">*</span><br><br>
+<!-- id="missNom" utilisé en JS dans la fonction validation, si regex ok -->
+			<label for="prenom">votre prénom </label>
+				<input id="prenom" type="text" name="prenom" required>
+				<span id="missPrenom">*</span><br><br>
+			<label for="adresse">votre adresse </label>
+				<textarea id="adresse" name="adresse" rows="3" required></textarea>					<!-- textarea pour écrire sur plusieurs lignes -->
+				<span id="missAdresse">*</span><br><br>
+			<label for="ville">votre ville </label>
+				<input id="ville" type="text" name="ville" required>
+				<span id="missVille">*</span><br><br>
+			<label for="postal">votre code postal </label>
+				<input id="postal" type="text" name="postal" required>
+				<span id="missPostal">*</span><br><br>
+			<label for="mail">votre e-mail </label>
+				<input id="mail" type="text" name="mail" required>	
+<!-- type="mail" -->
+				<span id="missMail">*</span><br><br>			
+		</fieldset><br>
+		<fieldset id="fieldset2">
+			<label>vous avez un jardin</label>
+				<input id=radio1 type="radio" name="jardin" value="vous avez un jardin">
+			<label >un balcon</label>
+				<input type="radio" name="jardin" value="balcon">
+		</fieldset><br>
+		<fieldset id="fieldset3">
+			<label type="text" name="nom">Vous jardinez...</label><br>
+				<select name="métier">
+					<option value="occasionnellement" selected>occasionnellement</option>
+					<option value="1 fois par semaine">1 fois par semaine</option>
+					<option value="quotidiennement">quotidiennement</option>
+					<option value="autre">autre</option>
+				</select><br><br>
+			<label for="nom">si vous avez répondu autre, précisez <input type="text" name="nom"></label><br><br>
+			<textarea name="commentaire" rows="5" cols="100" placeholder="vos commentaires"></textarea>	<!-- placeholder pour écrire en grisé -->
+			<br><br>
+		</fieldset><br>
+		<input id="envoyer" type="submit" name="nom" value="envoyer">
+		<input id="effacer" type="reset" name="nom" value="effacer">		
+<!-- type="reset" pour effacer le formulaire -->
+	</form>
+	<br>
+	<h4><a href="mailto/estelle.audenaert@gmail.com?subject=complément d'informations">Ecrivez-nous pour tout complément d'informations</a></h4>
+	<br>
+	<a href="jarditou.html">retour à l'accueil</a>
+	<script src="assets/js/ph16_eva_ex7formulaire.js"></script>
+</body>
+</html>

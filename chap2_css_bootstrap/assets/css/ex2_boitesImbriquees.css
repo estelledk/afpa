@@ -1,0 +1,19 @@
+p {  /* propriétés pour les boîtes imbriquées */
+	heignt: 2.5em;
+	padding: 1em; 
+	border: 1px solid black; 
+} 
+span { 
+	padding: 0.5em; 
+	border: 1px solid green; /* On rend la boîte visible, quel que soit son type */ 
+	background-color: yellow; 
+} 
+.inline { 
+	display: inline; 
+} 
+.block { 
+	display: block; 
+} 
+.inline-block { 
+	display: inline-block; 
+}

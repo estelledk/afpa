@@ -1,0 +1,149 @@
+Créez le script d’implémentation des différentes tables sous MySQL/MariaDB.
+Créez un index sur le champ nom de la table client.
+
+
+DROP DATABASE eval;
+CREATE DATABASE eval;
+USE eval;
+
+CREATE TABLE Client (
+cli_num INT NOT NULL,
+cli_nom VARCHAR(50) NOT NULL,
+cli_adresse VARCHAR(50) NOT NULL,
+cli_tel VARCHAR(30) NOT NULL,
+PRIMARY KEY(cli_num)
+);
+
+CREATE TABLE Produit (
+pro_num INT NOT NULL,
+pro_libelle VARCHAR(50) NOT NULL,
+pro_description VARCHAR(50) NOT NULL,
+PRIMARY KEY(pro_num)
+);
+
+CREATE TABLE Commande (
+com_num INT NOT NULL,
+cli_num INT NOT NULL,
+com_date DATETIME NOT NULL,
+com_obs VARCHAR(50) NOT NULL,
+PRIMARY KEY(com_num),
+FOREIGN KEY(cli_num) REFERENCES Client (cli_num)
+);
+
+CREATE TABLE est_compose (
+com_num INT NOT NULL,
+pro_num INT NOT NULL,
+est_qte INT NOT NULL,
+PRIMARY KEY(com_num, pro_num),
+FOREIGN KEY(com_num) REFERENCES Commande (com_num),
+FOREIGN KEY(pro_num) REFERENCES Produit (pro_num)
+);
+
+CREATE INDEX index_client ON Client (cli_nom);
+
+ 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
+1- Liste des contacts français :
+SELECT CompanyName AS 'Société', 
+ContactName AS contact, 
+ContactTitle AS Fonction, 
+Phone AS 'Téléphone'
+FROM Customers
+WHERE Country = 'France' ;
+
+
+2- Produits vendus par le fournisseur « Exotic Liquids » :
+SELECT ProductName AS Produit, UnitPrice AS Prix
+FROM Products
+JOIN Suppliers ON Products.SupplierID = Suppliers.SupplierID
+WHERE CompanyName = 'Exotic Liquids' ;
+
+
+3- Nombre de produits vendus par les fournisseurs Français dans l’ordre décroissant :
+SELECT CompanyName AS Fournisseur, count(ProductID) AS 'Nbre produits'
+FROM Suppliers
+JOIN Products ON Products.SupplierID = Suppliers.SupplierID
+WHERE Country = 'France'
+GROUP BY CompanyName
+HAVING count(*)
+ORDER BY count(ProductID) DESC ;
+
+
+4- Liste des clients Français ayant plus de 10 commandes :
+SELECT CompanyName AS Client, count(OrderID) AS 'Nbre commandes'
+from Customers
+JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+WHERE Country = 'France'
+GROUP BY CompanyName
+HAVING count(*) > 10 ;
+
+
+5- Liste des clients ayant un chiffre d’affaires > 30.000 :
+SELECT CompanyName AS Client, SUM(unitPrice*Quantity) AS CA, Country AS Pays
+FROM Customers
+JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+JOIN order_details ON Orders.OrderID = Order_details.OrderID
+GROUP BY CompanyName
+HAVING SUM(unitPrice*Quantity) > 30000
+ORDER BY SUM(unitPrice*Quantity) DESC ;
+
+ 
+6- Liste des pays dont les clients ont passé commande de produits fournis par « Exotic
+Liquids » :
+SELECT Customers.Country
+FROM Suppliers
+JOIN Products ON suppliers.SupplierID = Products.SupplierID
+JOIN Order_details ON Products.ProductID = order_details.ProductID
+JOIN Orders ON order_details.OrderID = Orders.OrderID
+JOIN Customers ON Orders.CustomerID = Customers.CustomerID
+WHERE Suppliers.CompanyName = 'Exotic Liquids'
+GROUP BY Customers.Country ;
+
+
+7- Montant des ventes de 1997 :
+
+SELECT SUM(UnitPrice*Quantity) AS 'Montant Ventes 97'
+FROM order_details
+JOIN orders ON Orders.OrderID = Order_details.OrderID
+WHERE orderdate LIKE '1997%' ;
+
+
+8- Montant des ventes de 1997 mois par mois :
+SELECT SUBSTRING(OrderDate, 6,2) AS 'Mois 97',
+SUM(UnitPrice*Quantity) AS 'Montant Ventes 97'
+FROM order_details
+JOIN orders ON Orders.OrderID = Order_details.OrderID
+WHERE orderdate LIKE '1997%'
+GROUP BY SUBSTRING(OrderDate, 6,2) ;
+
+
+9- Depuis quelle date le client « Du monde entier » n’a plus commandé ?
+SELECT OrderDate AS 'Date de dernière commande'
+FROM Customers
+JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+WHERE CompanyNAme = 'Du monde entier'
+ORDER BY OrderDate DESC LIMIT 1 ;
+
+
+10- Quel est le délai moyen de livraison en jours ?
+SELECT ROUND(AVG(DATEDIFF(ShippedDate, OrderDate))) AS 'Délai moyen de livraison en jours'
+FROM Orders ;
+
+
+
+
+
+
+
+
+
+
+
+
+

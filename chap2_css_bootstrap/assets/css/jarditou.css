@@ -1,0 +1,47 @@
+a{  					 /* liens */
+	color: #FFFFFF}
+a:visited {
+	color: #FFFFFF	
+}	
+
+.barreLiens {				/* barre de liens haute et basse */
+	background: #000000;
+	color: #FFFFFF;
+	width: 100%;
+	positionnement: absolute;
+	padding: 20px 20px 20px 40px;
+	word-spacing: 0.5cm
+}
+
+.bandeau-image {		/* incluant img promotion */
+	margin: 5px 0px 5px 1px;
+	width: 100%;
+}
+
+aside {			/* colonne à droite */
+	background-color: #c0c0c0;
+	height: 400px;
+	float: right;
+	width: 350px;
+	margin: 35px 0px 5px 1px; 
+}
+
+@media screen and (max-width: 768px)
+{
+	aside 
+	{
+		display: none;	/* colonne à droite disparaît sur les écrans mobiles 576 px */
+	}
+	h2
+	{
+		font-size: 40px;		/* ajustement police */
+	}
+	h3
+	{
+		font-size: 30px;		/* ajustement police */
+	}
+	p
+	{
+		font-size: 20px;		/* ajustement police */
+	}
+}

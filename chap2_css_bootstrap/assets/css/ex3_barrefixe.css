@@ -1,0 +1,26 @@
+body {
+	background: #dddddd;
+	margin: 50px;
+}
+
+.menufixe {  	   /* zone barre fixe */
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	border: 1px solid #000000; 
+	position: absolute;
+	background: #e8d2e8;
+	z-index: 2;
+	text-align: center;
+	line-height: 2em;
+} 
+html>body .menufixe { 
+	position: fixed;    /*  */
+}
+
+.content { 
+	z-index: 1;
+	padding-top: 3em; 
+	background: #ffffff;
+	padding: 10px;
+}

@@ -1,0 +1,101 @@
+<!-- 
+<blockquote>…</blockquote> : indique une citation
+<code>…</code> : indique du code informatique
+<em>…</em> : emphase (affichage similaire à l'italique, mais avec aun autre sens sémantique)
+<strong>…</strong> : fait ressortir du texte en gras
+<samp>…</samp> : affiche les caractères de manière littérale
+
+<b>…</b> affiche le texte en gras
+<i>…</i> affiche le texte en italique
+<u>…</u> souligne le texte
+<small>…</small> affiche le texte dans une police plus petite (l'inverse, <big> est obsolète en HTML 5)
+<sup>…</sup> : affiche le texte en exposant
+<sub>…</sub> : affiche le texte en indice
+
+HTML 5 a supprimé l'essentiel des balises qui permettaient la gestion des polices (<font>, <color>, <size>...), 
+qui doit se faire désormais uniquement via les feuilles de styles CSS, que nous étudierons plus tard.
+
+un code numérique (code ISO), commençant par les signes &# et suivi d'un point-virgule. Par exemple pour le 
+signe copyright © : &#169; ou pour la lettre è avec accent grave donc : &#232;
+certains codes peuvent porter optionnellement un nom correspondant : par exemple pour le copyright on peut 
+écrire &copy; ou, pour le è accent grave, &egrave;.
+
+
+Reprenez la page HTML créée précédemment et testez les différentes balises évoquées dans ce chapitre.
+-->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content ="présentation et structure d'un document HTML">
+	<title>Ma première page en HTML 5</title>
+	</head>
+<body>
+	<header>&lt;header&gt;</header>
+	<h1>Le HTML 5</h1>
+	<nav>&lt;nav&gt;</nav>
+	<section>&lt;section&gt;</section>
+	<h2>&lt;heading&gt;</h2>
+	<article>&lt;article&gt;</article>
+	<p id="HTML">Le langage HTML, c'est fantastique.</p>
+	<hr>
+	<p>ligne horizontale..........balise &lt;hr&gt;</p>
+	<hr>
+	<div>
+		<p>paragraphe sous div avec saut de ligne</p>
+		<p>texte du 1er paragraphe</p>
+		<p>texte du 2ème paragraphe</p>
+		<div>un autre div dans le div précédent qui contient <a href="ex2.html">un lien</a></div>
+		</div>
+	<hr>
+	<blockquote><p>Le langage HTML, c'est fantastique.------blockquote</p></blockquote>
+	<p><em>Le langage HTML, c'est fantastique.------em</em></p>
+	<p><strong>Le langage HTML, c'est fantastique.------strong</strong></p>
+	<p><samp>Le langage HTML, c'est fantastique.------samp</samp></p>
+	<p><b>Le langage HTML, c'est fantastique.------b</b></p>
+	<p><i>Le langage HTML, c'est fantastique.------i</i></p>
+	<p><u>Le langage HTML, c'est fantastique.------u</u></p>
+	<p><small>Le langage HTML, c'est fantastique.------small</small></p>
+	<p><sup>Le langage HTML, c'est fantastique.------sup</sup></p>
+	<p><sub>Le langage HTML, c'est fantastique.------sub</sub></p>
+	<p>test code caractère spécial : &#8596</p>
+	<hr>
+	<aside>&lt;aside&gt;</aside>
+	<ul>
+		<li>liste d'options..........balise &lt;ul&gt;</li>
+		<li>1er élément</li>
+		<li>2ème élement</li>
+		</ul>
+	<br>
+	<ol>
+		<li>liste ordonnée..........balise &lt;ol&gt;</li>
+		<li>1er élément</li>
+		<li>2ème élement</li>
+		</ol>
+	<br>
+	<ol start="100">
+		<li>liste ordonnée commançant par 2..........balise &lt;ol start="100"&gt;</li>
+		<li>1er élément</li>
+		<li>2ème élement</li>
+		</ol>
+	<br>
+	<ol type="a">
+		<li>liste ordonnée commançant par i..........balise &lt;ol type="a"&gt;</li>
+		<li>1er élément</li>
+		<li>2ème élement</li>
+		</ol>
+	<hr>
+	<br>
+	<p>saut..........&lt;br&gt;</p>
+	<br>
+	<footer>&lt;footer&gt;</footer>
+	</body>
+</html>

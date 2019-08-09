@@ -1,0 +1,15 @@
+div {      /* propriétés pour les fox */
+	width: 60px; 
+	height: 60px; 
+	border: 10px solid rgba(0, 0, 0, 0.5); 
+	padding: 10px; 					/* cadre intérieur */
+	margin: 20px 0; 
+	background-size: 110px; 
+	background-position: center; 
+	background-image: url('https://mdn.mozillademos.org/files/11947/ff-logo.png'); 
+	background-color: gold; 
+} 
+.default { background-clip: border-box; }  		/* s'ajuste à la page */
+.padding-box { background-clip: padding-box; } 	/* s'ajuste au cadre */
+.content-box { background-clip: content-box; }	/* s'ajuste au contenu */
+

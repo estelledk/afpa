@@ -1,0 +1,12 @@
+button 
+{
+    class : btn btn-success;
+    color: #ff0000; 
+} 
+
+
+.bandeau-image 
+{
+	width : 100%;  /* occupe 100% du bandeau */
+	height : auto;  /* height en auto */
+}

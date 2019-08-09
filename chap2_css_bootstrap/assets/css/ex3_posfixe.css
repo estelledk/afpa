@@ -1,0 +1,22 @@
+body {
+	background: #dddddd;
+}
+
+.content { 
+	width: 65%; 
+	border: 1px solid #000000;
+	padding: 1em 1%; 
+	background: #ffffff;
+} 
+
+.menu {     /* zone fixe à droite */
+	position: absolute; 
+	top: 1em; 
+	right: 1%; 
+	border: 1px solid #000000; 
+	padding: 1em; 
+	width: 20%; 
+	background: #e8d2e8;
+} 
+html>body .menu { 
+	position: fixed;    /*  */}

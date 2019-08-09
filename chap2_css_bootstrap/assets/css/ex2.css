@@ -1,0 +1,45 @@
+.one { 			/* propriétés pour les dépassements */
+	width: 400px; 				/* longueur du cadre */
+	height: 2.5em; 
+	border: 1px solid black;
+	padding: 10px 20px 10px 20px;		/* cadre intérieur H D B G */
+	margin: 20px 0 20px 0;			/* distance entre paragraphe et boîte limitrophe */
+}
+.autoscroll { overflow: auto; }
+.clipped { overflow: hidden; }
+.default { overflow: visible; }
+
+.two {      /* propriétés pour les fox */
+	width: 60px; 
+	height: 60px; 
+	border: 10px solid rgba(0, 0, 0, 0.5); 
+	padding: 10px; 					/* cadre intérieur */
+	margin: 20px 0; 
+	background-size: 110px; 
+	background-position: center; 
+	background-image: url('https://mdn.mozillademos.org/files/11947/ff-logo.png'); 
+	background-color: gold; 
+} 
+.default { background-clip: border-box; }  		/* s'ajuste à la page */
+.padding-box { background-clip: padding-box; } 	/* s'ajuste au cadre */
+.content-box { background-clip: content-box; }	/* s'ajuste au contenu */
+
+.three {  /* propriétés pour les boîtes imbriquées */
+	heignt: 2.5em;
+	padding: 1em; 
+	border: 1px solid black; 
+} 
+span { 
+	padding: 0.5em; 
+	border: 1px solid green; /* On rend la boîte visible, quel que soit son type */ 
+	background-color: yellow; 
+} 
+.inline { 
+	display: inline; 
+} 
+.block { 
+	display: block; 
+} 
+.inline-block { 
+	display: inline-block; 
+}

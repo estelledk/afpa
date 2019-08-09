@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>formulaire</title>
+</head>
+<body>
+	<form action="destination.php" method="post">
+		<input type="text" name="nom">
+		<input type="submit" value="envoyer">
+	</form>
+<br><br><hr><br><br>
+	<form action="http://bienvu.net/script.php" method="post">
+		<input type="text" name="nom">
+		<input type="submit" value="envoyer">
+	</form>
+<br><br><hr><br><br>
+	<form action="http://bienvu.net/script.php" method="post">
+		<input type="text" name="nom" size="50" maxlength="50" value="Estelle AUDENAERT">
+		<input type="submit" value="envoyer">
+	</form>
+<br><br><hr><br><br>
+	<form action="http://bienvu.net/script.php" method="post">
+		<label for="nom">Nom :</label>
+		<input type="text" name="nom" id="nom">
+	</form>
+<br><br><hr><br><br>
+	<form action="http://bienvu.net/script.php" method="post">
+		<label for="nom">Précisions :</label>
+		<textarea name="commentaire" rows="5" cols="30">zone de saisie multi-lignes</textarea>
+	</form>
+<br><br><hr><br><br>
+	<form action="http://bienvu.net/script.php" method="post">
+		<input type="checkbox" name="couleur1" value="Bleu" checked> Bleu
+		<input type="checkbox" name="couleur2" value="Rouge"> Rouge
+		<input type="checkbox" name="couleur3" value="Vert"> Vert
+	</form>
+<br><br><hr><br><br>
+	<form action="http://bienvu.net/script.php" method="post">
+		<input type="radio" name="couleur" value="Bleu"> Bleu
+		<input type="radio" name="couleur" value="Rouge"> Rouge
+		<input type="radio" name="couleur" value="Vert" checked="checked"> Vert
+	</form>
+<br><br><hr><br><br>
+	<select name="couleur">
+		<option value="Bleu">Bleu</option>
+		<option value="Rouge">Rouge</option>
+		<option value="Vert" selected>Vert</option>
+	</select>
+<br><br><hr><br><br>
+	<select name="couleur" size="3" multiple="multiple">
+		<option value="Bleu">Bleu</option>
+		<option value="Rouge">Rouge</option>
+		<option value="Vert">Vert</option>
+	</select>
+<br><br><hr><br><br>
+	<form action="destination.php" method="post" enctype="multipart/form-data">
+		<input type="file" name="fichier">
+	</form>
+<br><br><hr><br><br>
+	<form action="destination.php" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="fichier">
+	</form>
+<br><br><hr><br><br>
+	<fieldset>
+		<legend>Détails :</legend>
+		Nom: <input type="text"><br>
+		Email: <input type="text"><br>
+		Date de naissance: <input type="text">
+	</fieldset>
+<br><br><hr><br><br>
+	<label>Sélectionnez votre métier</label>
+	<input type="text" name="metiers1" id="metiers2" list="metiers3"><br>
+	<datalist id="metiers3">
+		<option value="webmaster">
+		<option value="développeur">
+		<option value="administrateur B.D.D.">
+	</datalist>
+<br><br><hr><br><br>
+	<form method="post" action="post.php" id="monform" onsubmit="resultat.value = parseInt(nombre1.value) + parseInt(nombre2.value); return false;">
+	<input type="number" name="nombre1" id="nombre1"> + 
+	<input type="number" name="nombre2" id="nombre2"> = 
+	<output for="number1 number2" name="resultat" form="monform">
+	</output><br>
+	<br>
+	<input type="submit" name="envoi" value="Calculer">
+	</form>
+<br><br><hr><br><br>
+	<input type="text" placeholder="Entrez votre nom" pattern="^[a-z]+$" required title="Entrez votre nom (que des caractères entre a et z)" />
+<br><br>
+</body>
+</html>

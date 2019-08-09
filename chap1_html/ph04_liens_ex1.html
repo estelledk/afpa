@@ -1,0 +1,110 @@
+<!-- 
+Reprenez la page HTML créée dans les séquences précédentes et testez les différents cas de liens évoqués. 
+
+La balise <a> - pour ancre (anchor en anglais) permet d'établir un lien hypertexte, au choix :
+*vers une autre page
+*vers une partie de la page courante
+*vers un autre site (une page sur un autre site)
+*vers une ressource (fichier, image, vidéo etc.)
+
+Un lien est composé de différentes parties et attributs :
+*l'attribut href, obligatoire, qui a pour valeur la destination du lien
+*l'attribut title, obligatoire, qui a pour valeur un texte indicatif qui s'affiche lorsque l'on passe la 
+souris sur le lien. 
+*Un texte, qui est affiché sur la page web (Cliquez ici dans l'exemple ci-dessus). 
+La rédaction de ce texte constitue des mots-clés pour le référencement.
+
+
+
+LIEN ENTRE 2 PAGES
+
+On peut naviguer entre différentes page HTML. Ceci se fait de la manière suivante :
+Page de destination dans le même répertoire que celle qui contient la balise <a> :
+
+
+																			
+LIEN INTERNE A LA PAGE
+
+Les liens internes permettent de naviguer au sein d'une même page HTML. Un lien permettra d'accéder directement 
+à une autre balise dans la page. La balise de destination devra posséder un attribut id afin de la nommer.
+Exemple :
+<p id="lacible">bla bla bla</p>  
+Pour accéder directement au paragraphe nommé lacible :
+<a href="#lacible" title="Aller à la cible">Aller au paragraphe qui parle de bla bla bla</a>
+L'attribut target s'applique à d'autres balises : <area>, <base>, <form> et <link>.
+
+
+
+LIEN ABSOLU ET RELATIF
+
+Il existe une distinction selon la façon dont on indique le chemin du lien dans l'attribut href :
+*Lien absolu : tout le chemin est renseigné depuis le début de l'arborescence : exemple : .
+*Lien relatif : chemin est indiqué avec les signes ../ pour parcourir l'arborescence de répertoires.
+
+
+TARGET
+
+L'attribut target, faculatif, permet d'indiquer dans quelle fenêtre (onglet du navigateur web) s'ouvrira le document.
+Les valeurs possibles pour l'attribut target sont :
+_blank : ouverture dans une nouvelle fenêtre
+_self : ouverture dans la fenêtre courante
+_parent : ouverture dans la fenêtre parente (quand on se trouve dans une popup par exemple)
+_top : ouvre la page dans la fenêtre parente de 1er niveau (s'il y a plusieurs fenêtres parentes, sinon se 
+comporte comme _self)
+Les bonnes pratiques d'ergonomie déconseillent l'emploi de target.
+L'attribut target peut s'appliquer aussi aux balises <area>, <base>, <form> et <link>.
+
+
+MAIL
+
+on indique comme valeur de l'attribut href l'adresse email du destinataire précédée de l'instruction mailto:
+
+
+
+Reprenez la page HTML créée dans les séquences précédentes et testez les différents cas de liens évoqués.
+-->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content ="présentation et structure d'un document HTML">
+	<title>title Ma première page en HTML 5</title>
+</head>
+<body>
+	<h1>h1 Le HTML 5</h1>
+	<h2>h2 heading</h2>
+	<p id="HTML">Le langage HTML, c'est fantastique.........avec id="HTML"</p>
+	<hr>
+	<div>
+		<p>paragraphe sous div avec saut de ligne<br>
+		<p>blabla<br>
+		<div>un autre div dans le div précédent qui contient <a href="ex2.html">un lien</a>..................&lt;a href="ex2.html"&gt;un lien&lt;/a&gt;</div></div>
+	<hr>
+	<blockquote><p>Le langage HTML, c'est fantastique.------blockquote</p></blockquote>
+	<p><em>Le langage HTML, c'est fantastique.------em</em></p>
+	<p><strong>Le langage HTML, c'est fantastique.------strong</strong></p>
+	<p><samp>Le langage HTML, c'est fantastique.------samp</samp></p>
+	<p><b>Le langage HTML, c'est fantastique.------b</b></p>
+	<p><i>Le langage HTML, c'est fantastique.------i</i></p>
+	<p><u>Le langage HTML, c'est fantastique.------u</u></p>
+	<p><small>Le langage HTML, c'est fantastique.------small</small></p>
+	<p><sup>Le langage HTML, c'est fantastique.------sup</sup></p>
+	<p><sub>Le langage HTML, c'est fantastique.------sub</sub></p>
+	<p>test code caractère spécial : &#8596</p>
+	<hr>
+	<h2>h2 aside</h2>
+	<h2>h2 footer</h2>	
+		<footer>
+		<a href="ex3" title="page suivante">Aller à l'exercice 3</a>
+		<p><a href="#HTML">lien vers id="HTML" inscrit dans la balise article............balise &lt;a href="#HTML"</a></p>
+		<p><a href="https://developer.mozilla.org">Pour quelques précisions via developer.mozilla.org..........balise &lt;a href="https..."&gt;</a>
+		<p><a href="mailto:estelle.audenaert@gmail.com?subject=stage">Ecrivez-nous pour la réponse du stage</a></p>
+		</footer>
+	</body>
+</html>

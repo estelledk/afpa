@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ex FORMULAIRE</title>
+	<link rel= "stylesheet" href="assets/css/ph16_formulaire_ex1.css">     
+</head>
+<body>
+	<!-- Réaliser un formulaire "Contact.html" correspondant au modèle cidessous, avec les contraintes suivantes :
+	 Le formulaire sera envoyé grâce à la méthode "Post" .
+	 La "Société" doit comporter au moins 1 caractère.
+	 La "Personne à contacter" doit comporter au moins 1 caractère.
+	 Le "Code postal" doit comporter 5 caractères numériques.
+	 La "Ville" doit comporter au moins 1 caractère.
+	 Le Email doit comporter au moins le caractère "@".
+	Le champ "Environnement technique" est une liste déroulante dans laquelle on peut choisir les techniques 
+	utilisées pour le projet proposé, ainsi qu'une zone de texte qui reçoit la sélection.
+	Il est permis de rajouter des informations manuelles dans la zone de texte.
+	La valeur "Choisissez" ne doit pas s'afficher dans la zone de texte si elle a été sélectionnée.
+	Prévoyez les messages appropriés en cas d'erreur de saisie  -->
+
+<h1>Vos coordonnées</h1>
+	<h3>*Ces zones sont obligatoires pour envoyer le formulaire.</h3>
+	<br>
+	<!-- balise formulaire avec lien php juste après h1 et avant script -->
+	<form action="http://bienvu.net/script.php" method="get">		
+<label for="entreprise">Société:</label>
+			<!-- id utilisé en JS dans la fonction validation/si champ vide-->
+			<input id="entreprise" type="text" name="entreprise" required>
+			<!-- id utilisé en JS dans la fonction validation/si regex ok -->
+			<span id="missEntreprise">*</span><br>
+			<br>
+		<label for="personne">Personne à contacter:</label>
+			<input id="personne" type="text" name="personne" required>
+			<span id="missPersonne">*</span><br>
+			<br>	
+		<label for="adresse">Adresse de l'entreprise:</label>
+			<!-- Textarea permet de rentrer les données sur plusieurs lignes -->
+			<textarea id="adresse" name="adresse" rows="3" required></textarea>	
+			<span id="missAdresse"></span><br>
+			<br>
+		<label for="postal">Code postal:</label>
+			<input id="postal" type="text" name="postal" required>
+			<span id="missPostal">*</span><br>
+			<br>
+		<label for="ville">Ville:</label>
+			<input id="ville" type="text" name="ville" required>
+			<span id="missVille">*</span><br>
+			<br>
+		<label for="mail">E-mail:</label>
+			<input id="mail" type="email" name="mail" required>	<!--type="mail"-->
+			<span id="missMail">*</span><br> 
+			<br>
+		<label for="telephone">Téléphone:</label>
+			<input id="telephone" type="tel" name="telephone" required><!--type="tel"-->
+			<span id="missTelephone">*</span><br> 
+			<br>
+		<label for="projet">Sélectionnez l'environnement technique du projet: </label> 
+			<textarea id="projet" name="projet" rows="5" cols="30"></textarea><br>
+			<br>
+		<select id="choix" name="Choisissez">
+			<option value= "Choisissez">Choisissez</option>
+			<option value="Access">Access</option>
+			<option value="Java">Java</option>
+			<option value="Delphi">Delphi</option>
+			<option value="Windev">Windev</option>
+			<option value="Visual Basic">Visual Basic</option> 
+			<option value="Power Builder">Power Builder</option>
+			<option value="Internet">Internet</option>
+			<option value="Intranet">Intranet</option>
+			<option value="Windows NT">Windows NT</option> 
+			<option value="Unix">Unix</option>
+			<option value="SQL Server">SQL Server</option> 
+			<option value="Oracle">Oracle</option>
+			<option value="Autres">Autres...</option>
+		</select><br>
+		<br>
+		<!-- type="submit" pour envoyer le formulaire -->
+		<input type="submit"  id="envoyer">
+		<!-- type="reset" pour effacer le formulaire -->				
+		<input type="reset" value="Effacer">				
+	 </form>
+	 <script src="assets/js/ph16_formulaire_ex1.js"></script>
+</body>
+</html>

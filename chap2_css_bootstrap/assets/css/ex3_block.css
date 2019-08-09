@@ -1,0 +1,32 @@
+/* ex1 block */
+.jaune { 
+	background-color: #ffff80; 
+} 
+.verte { 
+	background-color: #80ff80; 
+}
+
+/* ex2 inline */
+.rose { 
+	background-color: #ff80c0; 
+} 
+.bleu{ 
+	background-color: #0080ff; 
+}
+
+/* ex3 position relative */
+.gris { 
+	position: relative; 	/* position relative */
+	bottom: 5px; 
+	background-color: #c0c0c0; 
+}
+
+/* ex4 position relative superposée */
+.rouge { 
+	position: relative; 
+	bottom: 5px; 
+	left: 3em; 		/* écart à gauche pour superposer à droite */
+	background-color: #ff8080; 
+	}
+}
+

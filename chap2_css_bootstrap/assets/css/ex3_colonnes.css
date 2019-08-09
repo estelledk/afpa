@@ -1,0 +1,22 @@
+body { 
+	background-color: #e0e0e0;
+} 
+#centre { 
+	margin: 1em 25%; 
+	background-color: #ffffff; 
+} 
+#gauche { 
+	position: absolute; 
+	top: 1em; 
+	left: 1%; 
+	width: 18%; 
+} 
+#droite { 
+	position: absolute; 
+	top: 1em; 
+	right: 1%; 
+	width: 18%; 
+} 
+.jaune { 
+	background-color: #ffffb7; /* aqua */ 
+}

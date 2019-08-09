@@ -1,0 +1,51 @@
+body 
+{											<!-- <body> -->
+	background-color: #c0c0c0;
+	margin-left: 100px;
+}
+
+
+h1 
+{
+	font-size: 48pt;
+	color: #400080;
+	font-style: italic;
+	border-bottom: solid thin black;
+}
+
+
+p 
+{
+	font-size: 12pt;
+	line-height: 14pt;
+	letter-spacing: 0.2mm;
+	word-spacing: 0.8mm;
+	color: #8080c0;
+}
+
+
+* 
+{
+	font-family: comic sans ms;
+}
+
+
+.one 					 <!-- class="one" -->
+{
+	font-family: arial;
+	color: #8000ff;
+	font-size: 12pt;
+}
+
+
+#titre2					 <!-- id="titre2" -->
+{
+	color: #400080;
+}
+
+
+
+a:hover 				 <!-- lien a; puis :; puis pseudo classe HOVER qui fonctionne au passge de la souris -->
+{
+	color: red;
+}

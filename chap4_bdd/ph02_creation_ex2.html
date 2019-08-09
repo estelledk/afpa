@@ -1,0 +1,64 @@
+<!-- Vous allez commencer à créer des bases de données dans le SGBD MariaDB.
+
+Cette implémentation se fait grâce à l’utilisation du LDD, Langage de Définition de Données.
+
+Pour découvrir cette partie du langage SQL, lisez la ressource présentation SGBDR puis les types de données utilisables en MySQL
+
+Lisez ensuite le document traitant des contraintes et le document traitant des index.
+
+Vous y apprendrez, en particulier comment
+
+Créer une base
+Créer des tables
+Créer des contraintes
+Créer des index
+Puis vous réaliserez l'exercice 1 et l'exercice 2. -->
+
+
+drop database ph2_ex2;
+create database ph2_ex2;
+
+use ph2_ex2;
+
+CREATE TABLE Client(
+cl_num int auto_increment PRIMARY KEY,
+cl_adresse varchar(50),
+cl_nom varchar(50),
+cl_prenom varchar(50)
+);
+
+CREATE TABLE Station(
+station_num int auto_increment PRIMARY KEY,
+station_nom varchar(50)
+);
+
+CREATE TABLE Hotel(
+hotel_num int auto_increment PRIMARY KEY,
+station_num int,
+hotel_cap int,
+hotel_cat int,
+hotel_nom varchar(50),
+hotel_adresse varchar(50),
+FOREIGN KEY (station_num) REFERENCES Station(station_num)
+);
+
+CREATE TABLE Chambre(
+chb_num int auto_increment PRIMARY KEY,
+hotel_num int,
+chb_cap int,
+chb_conf int,
+chb_expo varchar(10),
+chb_type varchar(18),
+FOREIGN KEY (hotel_num) REFERENCES Hotel(hotel_num)
+);
+
+CREATE TABLE Reservation(
+chb_num int,
+cl_num int,
+res_arriv date,
+res_dep date,
+res_acpte int,
+res_prixTot int,
+FOREIGN KEY (chb_num) REFERENCES Chambre(chb_num),
+FOREIGN KEY (cl_num) REFERENCES Client(cl_num)
+);

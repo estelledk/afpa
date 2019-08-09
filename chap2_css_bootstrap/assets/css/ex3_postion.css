@@ -1,0 +1,42 @@
+/*1er exercice */
+.vert-foncé { 
+	position: relative; 
+	background-color: #408080; 
+	width: 15em; 
+}
+.orange { 
+	position: absolute; 
+	top: 2em; 		 /* positionnement par rapport au cadre vert_foncé */
+	right: 1em; 	/* positionnement par rapport au cadre vert_foncé */
+	background-color: #ff8000;
+}
+
+/* 2ème exercice */
+.vert-clair { 
+	position: relative; 
+	background-color: #9ecfcf; 
+	width: 15em; 
+	padding-top: 5em;   /* bordure interne en haut augmentée */
+}
+.orange-clair { 
+	position: absolute; 
+	top: 2em; 	
+	right: 1em; 	
+	background-color: #ffbf80;
+}
+
+/* 3ème exercice */
+.vert-très-clair { 
+	position: relative; 
+	background-color: #9ecfcf; 
+	width: 15em; 
+	padding-right: 7em;  /* bordure interne à droite augmentée */
+}
+.orange-très-clair { 
+	position: absolute; 
+	top: -0.5em; 	/* si on supprime la ligne le cadre orange est éjecté de la superposition */
+	right: 1em; 
+	background-color: #ffbf80;
+	width: 4em;         /* hauteur de la zone orange */
+}
+

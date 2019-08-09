@@ -1,0 +1,11 @@
+p { 			/* propriétés pour les dépassements */
+	width: 400px; 				/* longueur du cadre */
+	height: 2.5em; 
+	border: 1px solid black;
+	padding: 10px 20px 10px 20px;		/* cadre intérieur H D B G */
+	margin: 20px 0 20px 0;			/* distance entre paragraphe et boîte limitrophe */
+}
+.autoscroll { overflow: auto; }
+.clipped { overflow: hidden; }
+.default { overflow: visible; }
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+...
+<body>
+
+<!--balise <form> encadre la totalité du formulaire -->
+<form action="pageRedirection.html" method="POST">  <!-- page de redirection de l'utilisateur et des données -->
+<!-- method="POST" : données transmises sans passer dans l'URL  
+ou   method="GET" : données passent dans l'URL -->
+    
+<!-- <fieldset> : groupe de champs de saisie -->
+	<fieldset>
+		<legend>Titre du fieldset#1</legend>
+            
+<!-- une <div> pour chaque nouveau champ -->
+		<div>
+			<label for="memeIntituleQueId">affiche le nom d'un champs de saisie</label>
+			<input type="text" name="recupDonneesFormulaire" id="memeIntituleQueFor" [placeholder="champsPrerempli"]/>
+				   type="email"								<!-- id relie <input/> à <label> -->
+				   type="number"
+				   type="date"
+				   type="radio"		 : bouton. Une <div> doit englober tous les boutons
+				   type="checkbox"	 : sélection multiple
+				   type="submit"
+				   type="reset"
+		</div
+			
+			
+<!-- BOUTONS RADIO avec une <div> globale regroupant tous les boutons radio -->			        
+		<div> 
+			<div>
+            	<input type="radio" name="blabla" id="aa" value="aa" />
+            	<label for="aa">affiche le nom du champs aaaa</label>
+        	</div>
+			<div>
+				<input type="radio" name="blabla" id="bb" value="bb" />
+				<label for="bbbb">affiche le nom du champs bbbb</label>
+			</div>
+		</div>
+        
+        
+<!-- LISTE DEROULANTE avec <select><option> -->
+		<div>
+			<label for="cc"></label>
+       		<select name="cc" id="cc">  <!-- avec <select><option><option>...  -->
+				<option value="valeur0" [dissabled selected]>dissabled : affiche une option qui ne peut pas être sélectionnée ; 
+															 	 selected : qui est affichée par défaut</option>
+	        	<option value="valeur1">affiche le nom d'un champs</option>
+	        	<option value="valeur2">affiche le nom d'un champs</option>
+        	</select>
+		</div>
+        	
+	</fieldset>
+  
+  
+	<fieldset>
+    	<legend>Titre du fieldset#2</legend>
+    	
+<!-- TEXTAREA -->   
+ 		<div>
+        	<label for="dd"></label>
+        	<textarea name="dd" id="dd" rows="4">affiche le nom sur 4 lignes</textarea>
+		</div>		
+	</fieldset>		
+			
+				
+	<div>  <!-- <div> globale regroupant les 2 boutons -->
+<!-- BOUTON VALIDATION -->
+		<div>
+			<input type="submit" name="valid" id="submit" value="envoyer"/>
+		</div>
+<!-- BOUTON RESET DU FORMULAIRE -->
+		<div>
+			<input type="reset" name="reset" id="reset" value="effacer"/>
+		</div>
+	</div>			
+
+
+</form>
+<!--  fermeture balise <form> -->
+                    
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+crossorigin="anonymous"></script>	
+</body>
+</html>

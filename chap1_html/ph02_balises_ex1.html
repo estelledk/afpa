@@ -1,0 +1,159 @@
+<!-- 
+												BALISES TYPE BLOC
+<address> information de contact
+<article> contenu d'un article
+<aside> Contenu tangentiel
+<blockquote> Citation longue
+<canvas> Canevas de dessin
+<dd> Description d'une définition
+<div> Division d'un document
+<dl> Liste de définitions
+<dt> Définition/description d'un terme
+<fieldset> Ensemble de champs
+<figcaption> Légende d'une image
+<figure> Permet de grouper des média avec une légende (voir)
+<footer> Bas de page ou de section
+<form> formulaire
+<h1>, <h2>, <h3>, <h4>, <h5>, <h6> éléments de titre de niveau 1 à 6.
+<header> entête de page ou de section
+<hgroup> Information d'en-tête de groupe
+<hr> Ligne de division horizontale
+<main> Contient le contenu central unique au document.
+<nav> Contient des liens de navigation.
+<noscript> Contenu à utiliser si les scripts ne fonctionnent pas ou s'ils sont désactivés.
+<ol> Liste ordonnée.
+<output> Résultat d'un formulaire.
+<p> Paragraphe.
+<pre> Texte pré-formaté.
+<section> Section d'une page web.
+<table> Tableau.
+<tfoot> Pied de tableau.
+<ul> Liste non-ordonnée.
+<video> Lecteur vidéo
+
+													BALISES TYPE EN LIGNE
+<a> lien
+<abbr> Abréviation
+<acronym> Acronyme
+<b> gras (bold)
+<bdo> surcharge bidirectionnelle
+<br> saut de ligne
+<button> boutton
+<cite> Titre d’une oeuvre
+<code> Code (langage informatique)
+<dfn> Définition
+<em> Emphase
+<i> italique
+<img> image
+<input> champ de formulaire
+<kbd> touche clavier (keyboard)
+<label> Etiquette de champ de formulaire
+<map> découpage d’une image en zones réactives (cliquables)
+<object>
+<q> citation courte (quote)
+<samp> exemple (sample)
+<script> script
+<select> liste déroulante (formulaires)
+<small> petits caractères
+<span> conteneur générique de texte en ligne
+<strong> texte important (affiché en gras mais ne pas confondre)
+<sub> texte en indice
+<sup> texte en exposant
+<textarea> zone de texte (formulaires)
+<time> indique une heure ou une date (à formater)
+<var> calcul ou variable d'un langage informatique
+
+														SECTIONNEMENT
+<header> indique l’entête (on y mettra par exemple un logo),
+<nav> indique un bloc de navigation, c’est-à-dire un menu
+<section> indique une section de contenu
+<article> indique un article de contenu; cette balise doit être englobée dans une section (qui peut 
+contenir plusieurs articles).
+<aside> se positionne sur le côté d’un article (ou d'une section) pour indiquer un complément de texte
+ 	(une note, une référence etc.) se rapportant directement à l'article. Cette balise ne doit pas servir
+  	à créer des colonnes latérales au contenu principal dont le contenu ne serait pas en rapport).
+
+														BALISES DIV P BR
+Un div peut contenir un autre <div> (voire plusieurs) ainsi que d’autres balises enfant, notamment des paragraphes.
+
+La balise <p></p> permet de commencer un nouveau paragraphe (double espacement).
+
+La balise <br> effectue un retour à la ligne (simple espacement) et ne comporte jamais de texte.
+
+
+En reprenant comme base l'exercice de la phase 1, découper la partie <body> selon l'image du paragraphe 
+sectionnement ci-dessus.
+
+Certaines balises que nous venons de voir imposent une mise en forme des éléments. Comme vu plus haut, les 
+balises doivent indiquer la structure du document et non pas sa présentation. Les balises et les attributs de présentation sont remplacés par l'application de feuilles de styles (que nous verrons dans la prochaine séance).
+ -->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content ="présentation et structure d'un document HTML">
+	<title>Ma première page en HTML 5</title>
+	</head>
+<body>
+	<header>&lt;header&gt;</header>
+	<h1>Le HTML 5</h1>
+	<nav>&lt;nav&gt;</nav>
+	<section>&lt;section&gt;</section>
+	<h2>&lt;heading&gt;</h2>
+	<article>&lt;article&gt;</article>
+	<p id="HTML">Le langage HTML, c'est fantastique.</p>
+	<hr>
+	<p>ligne horizontale..........balise &lt;hr&gt;</p>
+	<hr>
+	<div>
+		<p>paragraphe sous div avec saut de ligne</p>
+		<p>texte du 1er paragraphe</p>
+		<p>texte du 2ème paragraphe</p>
+		<div>un autre div dans le div précédent qui contient <a href="ex2.html">un lien</a></div>
+		</div>
+	<aside>&lt;aside&gt;</aside>
+	<hr>
+	<ul>
+		<li>liste d'options..........balise &lt;ul&gt;</li>
+		<li>1er élément</li>
+		<li>2ème élement</li>
+		</ul>
+	<br>
+	<ol>
+		<li>liste ordonnée..........balise &lt;ol&gt;</li>
+		<li>1er élément</li>
+		<li>2ème élement</li>
+		</ol>
+	<br>
+	<ol start="100">
+		<li>liste ordonnée commançant par 2..........balise &lt;ol start="100"&gt;</li>
+		<li>1er élément</li>
+		<li>2ème élement</li>
+		</ol>
+	<br>
+	<ol type="a">
+		<li>liste ordonnée commançant par i..........balise &lt;ol type="a"&gt;</li>
+		<li>1er élément</li>
+		<li>2ème élement</li>
+		</ol>
+	<hr>
+	<br>
+	<p>saut..........&lt;br&gt;</p>
+	<br>
+	<footer>
+		<p>&lt;footer&gt;</p>
+		<a href="ex3" title="page suivante">Aller à l'exercice 3</a>
+		<p><a href="#HTML">lien vers id="HTML" inscrit dans la balise article............balise &lt;a href="#HTML"</a></p>
+		<p><a href="https://developer.mozilla.org">Pour quelques précisions via developer.mozilla.org..........balise &lt;a href="https..."&gt;</a>
+		<p><a href="mailto:estelle.audenaert@gmail.com?subject=stage">Ecrivez-nous pour la réponse du stage</a></p>
+		</footer>
+	</body>
+</html>
